@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 18rem 1fr;
+    grid-template-areas: 
+    "sidebar head head"
+    "sidebar content content"
+    "sidebar content content"
+    "sidebar content content";
+
+}
+
+.sidebar {
+    display: grid;
+    grid-area: sidebar;
+    padding: 2rem;
+    color: white;
+    background-color: rgb(74, 74, 228);
+   
+}
+
+.head {
+    grid-area: head;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.content {
+    grid-area: content;
+    background-color: lightgray;
+}
+
+svg {
+    fill: white;
+    width: 1.7em;
+    height: 1.7rem;
+}
+
+.user, 
+.dash,
+.help {
+    display: grid;
+    grid-template-columns: repeat(2, 5rem);
+    margin-bottom: 2rem;
+}
+
+.user,
+.help,
+.dash > div > * {
+    align-items: center;
+    justify-content: end;
+    border: solid red 2px;
+    background-color: green;
+}
