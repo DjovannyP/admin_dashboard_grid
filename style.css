@@ -7,16 +7,17 @@
 .container {
     
     display: grid;
-    height: 90vh;
+    height: 100vh;
     grid-template-columns: 18rem 1fr;
     grid-template-areas: 
     "sidebar head head"
     "sidebar content content"
     "sidebar content content"
+    "sidebar content content"
     "sidebar content content";
 
 }
-
+/* Sidebar */
 .sidebar {
     display: grid;
     grid-area: sidebar;
@@ -26,21 +27,9 @@
    
 }
 
-.head {
-    grid-area: head;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
 .content {
     grid-area: content;
     background-color: lightgray;
-}
-
-svg {
-    fill: white;
-    width: 1.7em;
-    height: 1.7rem;
 }
 
 .user, 
@@ -53,9 +42,70 @@ svg {
 
 .user,
 .help,
-.dash > div > * {
+.dash div {
     align-items: center;
-    justify-content: end;
-    border: solid red 2px;
-    background-color: green;
+}
+
+/* Svg */
+svg {
+    fill: white;
+    width: 1.7em;
+    height: 1.7rem;
+}
+
+.black {
+    fill: black;
+}
+
+/* img */
+
+img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+/* header */
+
+.head {
+    display: grid;
+    margin-top: 20px;
+    grid-area: head;
+    grid-template-columns: 38rem 1fr;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+input {
+    width: 30rem;
+    background: lightgray;
+    border: none;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.profile {
+    display: grid;
+    width: 20rem;
+    justify-content: center;
+    align-items:start;
+    margin-left: 50px;
+    grid-template-columns: repeat(2, 1fr);
+}
+.notification {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+button {
+    width: 8rem;
+    height: 3rem;
+    color: white;
+    font-weight: bold;
+    background: blue;
+    font-size: 1rem;
+    margin-right: 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
 }
