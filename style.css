@@ -6,17 +6,11 @@
 
 body{
     display: grid;
+    min-height: 100vh;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
     "nav header header header"
-    "nav header header header"
-    "nav header header header"
-    "nav main main main"
-    "nav main main main"
-    "nav main main main"
-    "nav main main main"
-    "nav main main main"
     "nav main main main"
     "nav main main main"
     "nav main main main"
@@ -24,13 +18,15 @@ body{
 
     ;
 }
+
+/* Dashboard header */
 .header {
     display: grid;
     grid-area: header;
     grid-template-columns: repeat(2, 1fr);
     background-color: lightgray;
-    gap: 10px;
-    padding: 20px;
+    gap: 5px;
+    padding: 15px;
 }
 
 input{
@@ -45,9 +41,11 @@ input{
     height: 90px;
 }
 
-.notification img {
+.images {
     width: 70px;
     height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
    
 }
 
@@ -67,7 +65,7 @@ i {
 }
 
 button {
-    width: 7rem;
+    width: 6.5rem;
     height: 2.8rem;
     border: none;
     border-radius: 25px;
@@ -87,11 +85,6 @@ color: white;
 font-size: 1rem;
 
 }
-/* Utilities classes */
-.images {
-    object-fit: cover;
-    border-radius: 50%;
-}
 
 .nav {
     display: grid;
@@ -106,15 +99,32 @@ font-size: 1rem;
 } 
 
 .main {
-    display: grid;
     grid-area: main;
-    gap: 18px;
-    padding: 20px;
-    grid-template-columns: repeat(2, 20rem) 1fr;
-    grid-template-rows: repeat(3, 10rem);
     background: rgb(233, 196, 170);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
 }
 
+.main-grid {
+    display: grid;
+    padding: 20px 20px 0 0;
+}
+.grid-card {
+    display: grid;
+    grid-template-columns: repeat(2, 18rem);
+    grid-template-rows: repeat(auto-fit, minmax(75px, 1fr));
+    gap: 20px;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: green;
+    padding-left: 20px;
+}
+
+/* grid card */
 .card {
     background-color: whitesmoke;
     border-left: solid 8px chocolate;
@@ -122,6 +132,29 @@ font-size: 1rem;
     padding: 10px;
     border-radius: 7px;
 }
+
+.second-grid {
+    display: grid;
+    gap: 20px;
+}
+.special-card {
+background-color:whitesmoke;
+height: 320px;
+padding: 10px;
+display: grid;
+border-radius: 7px;
+gap: 5px;
+justify-content: center;
+align-items: center;
+}
+
+.combo > div{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    
+}
+
 .icon {
     display:flex;
     justify-content: flex-end;
