@@ -107,6 +107,7 @@ font-size: 1rem;
 }
 
 .main-grid {
+    position: relative;
     display: grid;
     padding: 20px 20px 0 0;
 }
@@ -129,6 +130,7 @@ font-size: 1rem;
     background-color: whitesmoke;
     border-left: solid 8px chocolate;
     display: grid;
+    margin-top: 23px;
     padding: 10px;
     border-radius: 7px;
 }
@@ -159,4 +161,11 @@ align-items: center;
     display:flex;
     justify-content: flex-end;
     gap: 10px;
+}
+
+/* grid title */
+
+.pro {
+    position: absolute;
+    top: 1px;
 }
